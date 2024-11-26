@@ -26,26 +26,30 @@
 
 
 
-## 기간 / 팀원
-![개발일정](https://github.com/user-attachments/assets/2d57efae-403f-4bd8-ab96-b1266e1d5ed3)
-### 23.09.02 ~ 23.09.25 
+## 팀 소개
+- 팀명 : CoreOps
 
-### 5인 
-
-
-
-| title1 | title2 | title3 |
-| --- | --- | --- |
-| 1 | 2 | 3 |
-| @hyejux | 5 | 6 |
-| 7 | 8 | 9 |
-
-
+<table>
+  <tbody>
+      <td align="center"><a href="https://github.com/@shAn-kor"><img src="https://github.com/@shAn-kor" width="100px;" alt=""/><br /><sub><b> @shAn-kor  </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/@hyejux"><img src="https://github.com/@hyejux" width="100px;" alt=""/><br /><sub><b> @hyejux </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/@soyoungjangme"><img src="https://github.com/@soyoungjangme" width="100px;" alt=""/><br /><sub><b> @soyoungjangme </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/@CUTLETER"><img src="https://github.com/@CUTLETER" width="100px;" alt=""/><br /><sub><b>@CUTLETER   </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/@wjin01"><img src="https://github.com/@wjin01" width="100px;" alt=""/><br /><sub><b> @wjin01  </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/@ddd654"><img src="https://github.com/@ddd654" width="100px;" alt=""/><br /><sub><b> @ddd654  </b></sub></a><br /></td>
+  </tbody>
+</table>
 
 
 
 <br>
 
+## 개발 일정 
+![개발일정](https://github.com/user-attachments/assets/2d57efae-403f-4bd8-ab96-b1266e1d5ed3)
+### 23.09.02 ~ 23.09.25 
+
+
+<br>
 
 
 
