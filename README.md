@@ -1,5 +1,5 @@
 
-#  🏙 SharedOne - ERP Order Management System 
+#  💻 SharedOne - ERP Order Management System 
 ![ui](https://github.com/user-attachments/assets/daddd8f1-5f5c-45f7-a66e-52ff1d9d7236)
 
 
@@ -7,10 +7,14 @@
 
 ## 목차
 
-1. [ㅎㅎ](#--주문-관리-시스템-erp-order-management-system)
-2. [ㅎㅎ](#-ui)   
-3. [ㅎㅎ(Stack)](#-stack)   
-4. [ㅎㅎ](#-메뉴-구조도)   
+1. [개요](#주문-관리-시스템-erp-order-management-system)
+2. [팀 소개](#팀-소개)   
+3. [개발일정](#개발-일정)   
+4. [화면설계 (UI)](#화면-설계-ui)   
+5. [Tech-Stack](#tech-stack)  
+6. [프로젝트 산출물](#프로젝트-산출물)  
+
+
 
 
 
@@ -24,49 +28,36 @@
 
 </br>
 
+출판사가 고객(거래처), 상품을 등록할 수 있고 고객이 주문한 상품들을 주문 등록하고 승인받는 형태의 시스템입니다. 
+
 
 
 ## 팀 소개
-- 팀명 : CoreOps
-- 팀원 :
+- **팀명**: CoreOps
+  <br>
+- **팀원** 
 <table>
   <tbody>
-      <td align="center"><a href="https://github.com/shAn-kor"><img src="https://github.com/shAn-kor" width="100px;" alt=""/><br /><sub><b> @shAn-kor  </b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/hyejux"><img src="https://github.com/hyejux" width="100px;" alt=""/><br /><sub><b> @hyejux </b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/soyoungjangme"><img src="https://github.com/soyoungjangme" width="100px;" alt=""/><br /><sub><b> @soyoungjangme </b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/CUTLETER"><img src="https://github.com/CUTLETER" width="100px;" alt=""/><br /><sub><b>@CUTLETER   </b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/wjin01"><img src="https://github.com/wjin01" width="100px;" alt=""/><br /><sub><b> @wjin01  </b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/ddd654"><img src="https://github.com/ddd654" width="100px;" alt=""/><br /><sub><b> @ddd654  </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/shAn-kor"><img src="https://avatars.githubusercontent.com/shAn-kor" width="100px;" alt=""/><br /><sub><b> @shAn-kor  </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/hyejux"><img src="https://avatars.githubusercontent.com/hyejux" width="100px;" alt=""/><br /><sub><b> @hyejux  </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/soyoungjangme"><img src="https://avatars.githubusercontent.com/soyoungjangme" width="100px;" alt=""/><br /><sub><b> @soyoungjangme </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/CUTLETER"><img src="https://avatars.githubusercontent.com/CUTLETER" width="100px;" alt=""/><br /><sub><b>@CUTLETER   </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/wjin01"><img src="https://avatars.githubusercontent.com/wjin01" width="100px;" alt=""/><br /><sub><b> @wjin01  </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/ddd654"><img src="https://avatars.githubusercontent.com/ddd654" width="100px;" alt=""/><br /><sub><b> @ddd654  </b></sub></a><br /></td>
   </tbody>
 </table>
+
 
 
 
 <br>
 
 ## 개발 일정 
-![개발일정](https://github.com/user-attachments/assets/2d57efae-403f-4bd8-ab96-b1266e1d5ed3)
 ### 23.09.02 ~ 23.09.25 
-
-
-<br>
-
-
-
-</br>
+![개발일정](https://github.com/user-attachments/assets/2d57efae-403f-4bd8-ab96-b1266e1d5ed3)
 
 
 
-
-## 화면 설계 (UI)
-
-![image (1)](https://github.com/user-attachments/assets/443f151b-5183-479c-9ce0-2d3e82c6decc) 
-![image (2)](https://github.com/user-attachments/assets/a34429d9-eb87-477d-934e-d01d072450b3)
-![image (3)](https://github.com/user-attachments/assets/9442be25-b55b-4895-b689-5ea0c7c9ffc6)
-![image (5)](https://github.com/user-attachments/assets/869bded6-84ab-4c5d-b33d-ffac404f9b04)
-![image (4)](https://github.com/user-attachments/assets/16e23c52-b0a3-471b-acc4-7da0111d6527)
-
-<br>
 <br>
 
 
@@ -94,34 +85,84 @@
 
 
 
+
 </br>
+
+
+
+
+## 화면 설계 (UI)
+
+![image (1)](https://github.com/user-attachments/assets/443f151b-5183-479c-9ce0-2d3e82c6decc) 
+![image (2)](https://github.com/user-attachments/assets/a34429d9-eb87-477d-934e-d01d072450b3)
+![image (3)](https://github.com/user-attachments/assets/9442be25-b55b-4895-b689-5ea0c7c9ffc6)
+![image (5)](https://github.com/user-attachments/assets/869bded6-84ab-4c5d-b33d-ffac404f9b04)
+![image (4)](https://github.com/user-attachments/assets/16e23c52-b0a3-471b-acc4-7da0111d6527)
+
+<br>
 <br>
 
-##  프로젝트 산출물
+
+
+
+</br>
+
+
+## 프로젝트 시연 영상
+https://drive.google.com/file/d/1KYAIyzTI8F43DpqoN_w5tnCVihCEqGb6/view
+
+
+
+
 <br>
 
-###  메뉴 구조도
+
+
+## 프로젝트 산출물
+
+
+
+</br>
+
+<details><summary>메뉴 구조도
+</summary>
 
 ![menu](https://github.com/user-attachments/assets/7273bd12-fd7b-480d-bd19-d62e4b3437fd)
 
-</br>
-
-###  요구사항 정의서
+</details>
 
 </br>
 
+<details><summary>요구사항 정의서
+</summary>
 
-###  FlowChart
+![기능](https://github.com/user-attachments/assets/3cb96be3-d6e3-4e8a-b96e-76679eee5b06)
+
+</details>
+
+</br>
+
+<details><summary>FlowChart
+</summary>
+
 ![다운로드](https://github.com/user-attachments/assets/9d83eba7-9f56-4ae6-af8c-383d0fb8729a)
 
+</details>
+
 </br>
 
-###  ERD
+<details><summary>ERD
+</summary>
+
 ![ERD](https://github.com/user-attachments/assets/17e08c19-54dd-4869-b526-2370f26bde56)
 
+</details>
+
 </br>
 
-##  협업 
+<details><summary> Confluence 협업
+</summary>
+
 
 ![confluence](https://github.com/user-attachments/assets/6ada4aa5-f78a-4d7f-a8c9-96375798c5ea)
 
@@ -138,4 +179,8 @@
 - **개발 관련 & 공동 작업 가이드 작성**: 새로운 개발 도구나 언어, 공동 작업에 대해 팀원들이 쉽게 이해하고 편리하게 사용할 수 있도록 가이드를 작성하여 개발 효율성을 높였습니다.
 
 - **기타 프로젝트 산출물 및 링크 관리**: 프로젝트 산출물과 관련 서류, 개발 관련 링크들을 체계적으로 정리하여 편의성을 높였습니다.
+
+</details>
+
+
 
