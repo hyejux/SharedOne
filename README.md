@@ -1,4 +1,72 @@
-## 🛠 Stack
+
+#  🏙 SharedOne - ERP Order Management System 
+![ui](https://github.com/user-attachments/assets/daddd8f1-5f5c-45f7-a66e-52ff1d9d7236)
+
+
+<br>
+
+## 목차
+
+1. [ㅎㅎ](#--주문-관리-시스템-erp-order-management-system)
+2. [ㅎㅎ](#-ui)   
+3. [ㅎㅎ(Stack)](#-stack)   
+4. [ㅎㅎ](#-메뉴-구조도)   
+
+
+
+<br>
+
+## 주문 관리 시스템 (ERP Order Management System)
+
+**출판사**를 위한 **주문 관리 시스템**을 만들었습니다. (문학동네 출판사를 모티브로 제작하였습니다.)
+<br>
+**고객관리, 상품관리, 주문관리, 판매가관리, 직원/권한관리** 기능이 있습니다.
+
+</br>
+
+
+
+## 기간 / 팀원
+![개발일정](https://github.com/user-attachments/assets/2d57efae-403f-4bd8-ab96-b1266e1d5ed3)
+### 23.09.02 ~ 23.09.25 
+
+### 5인 
+
+
+
+| title1 | title2 | title3 |
+| --- | --- | --- |
+| 1 | 2 | 3 |
+| @hyejux | 5 | 6 |
+| 7 | 8 | 9 |
+
+
+
+
+
+<br>
+
+
+
+
+</br>
+
+
+
+
+## 화면 설계 (UI)
+
+![image (1)](https://github.com/user-attachments/assets/443f151b-5183-479c-9ce0-2d3e82c6decc) 
+![image (2)](https://github.com/user-attachments/assets/a34429d9-eb87-477d-934e-d01d072450b3)
+![image (3)](https://github.com/user-attachments/assets/9442be25-b55b-4895-b689-5ea0c7c9ffc6)
+![image (5)](https://github.com/user-attachments/assets/869bded6-84ab-4c5d-b33d-ffac404f9b04)
+![image (4)](https://github.com/user-attachments/assets/16e23c52-b0a3-471b-acc4-7da0111d6527)
+
+<br>
+<br>
+
+
+##  Tech Stack
 
 - **Front-End:** 
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
@@ -22,4 +90,48 @@
 
 
 
----
+</br>
+<br>
+
+##  프로젝트 산출물
+<br>
+
+###  메뉴 구조도
+
+![menu](https://github.com/user-attachments/assets/7273bd12-fd7b-480d-bd19-d62e4b3437fd)
+
+</br>
+
+###  요구사항 정의서
+
+</br>
+
+
+###  FlowChart
+![다운로드](https://github.com/user-attachments/assets/9d83eba7-9f56-4ae6-af8c-383d0fb8729a)
+
+</br>
+
+###  ERD
+![ERD](https://github.com/user-attachments/assets/17e08c19-54dd-4869-b526-2370f26bde56)
+
+</br>
+
+##  협업 
+
+![confluence](https://github.com/user-attachments/assets/6ada4aa5-f78a-4d7f-a8c9-96375798c5ea)
+
+</br>
+
+**Confluence**를 활용하여 프로젝트 산출물, 회의록 등 **주요 문서들을 효율적으로 관리하고 공유**했습니다. 😀
+
+</br>
+
+- **주차별 개발 일정**: 매주 개발 목표를 설정하고, 개발 작업을 하나하나 기록하여 신속하고 정확한 개발을 진행할 수 있었습니다. 또한 실시간으로 개발 현황을 공유하고, 역할별 작업량에 따라 분업하여 협업을 더욱 효율적으로 이루어냈습니다.
+
+- **회의록 및 피드백 정리**: 주기적인 회의를 통해 작업 현황과 기업 피드백을 반영하여 개발 계획과 목표를 조정하며 효율적인 개발을 추진했습니다.
+
+- **개발 관련 & 공동 작업 가이드 작성**: 새로운 개발 도구나 언어, 공동 작업에 대해 팀원들이 쉽게 이해하고 편리하게 사용할 수 있도록 가이드를 작성하여 개발 효율성을 높였습니다.
+
+- **기타 프로젝트 산출물 및 링크 관리**: 프로젝트 산출물과 관련 서류, 개발 관련 링크들을 체계적으로 정리하여 편의성을 높였습니다.
+
