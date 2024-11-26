@@ -28,15 +28,15 @@
 
 ## 팀 소개
 - 팀명 : CoreOps
-
+- 팀원 :
 <table>
   <tbody>
-      <td align="center"><a href="https://github.com/@shAn-kor"><img src="https://github.com/@shAn-kor" width="100px;" alt=""/><br /><sub><b> @shAn-kor  </b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/@hyejux"><img src="https://github.com/@hyejux" width="100px;" alt=""/><br /><sub><b> @hyejux </b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/@soyoungjangme"><img src="https://github.com/@soyoungjangme" width="100px;" alt=""/><br /><sub><b> @soyoungjangme </b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/@CUTLETER"><img src="https://github.com/@CUTLETER" width="100px;" alt=""/><br /><sub><b>@CUTLETER   </b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/@wjin01"><img src="https://github.com/@wjin01" width="100px;" alt=""/><br /><sub><b> @wjin01  </b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/@ddd654"><img src="https://github.com/@ddd654" width="100px;" alt=""/><br /><sub><b> @ddd654  </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/shAn-kor"><img src="https://github.com/shAn-kor" width="100px;" alt=""/><br /><sub><b> @shAn-kor  </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/hyejux"><img src="https://github.com/hyejux" width="100px;" alt=""/><br /><sub><b> @hyejux </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/soyoungjangme"><img src="https://github.com/soyoungjangme" width="100px;" alt=""/><br /><sub><b> @soyoungjangme </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/CUTLETER"><img src="https://github.com/CUTLETER" width="100px;" alt=""/><br /><sub><b>@CUTLETER   </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/wjin01"><img src="https://github.com/wjin01" width="100px;" alt=""/><br /><sub><b> @wjin01  </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/ddd654"><img src="https://github.com/ddd654" width="100px;" alt=""/><br /><sub><b> @ddd654  </b></sub></a><br /></td>
   </tbody>
 </table>
 
