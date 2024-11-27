@@ -52,7 +52,8 @@
 
 ## 개발 일정 
 ### 23.09.02 ~ 23.09.25 
-![개발일정](https://github.com/user-attachments/assets/2d57efae-403f-4bd8-ab96-b1266e1d5ed3)
+![850ebab6-37c0-4b11-b9ad-7958879ff2e5](https://github.com/user-attachments/assets/b304d9df-98d0-4b97-926e-ff937e31f228)
+
 
 
 
@@ -109,6 +110,9 @@
 ## 프로젝트 시연 영상
 https://drive.google.com/file/d/1KYAIyzTI8F43DpqoN_w5tnCVihCEqGb6/view
 
+![1CoreOps-Trim-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/09263d49-ff02-4372-a000-a0665a11beb8)
+
+
 
 
 
@@ -122,44 +126,41 @@ https://drive.google.com/file/d/1KYAIyzTI8F43DpqoN_w5tnCVihCEqGb6/view
 
 </br>
 
-<details><summary>메뉴 구조도
-</summary>
+### ⚙ 메뉴 구조도
+
 
 ![menu](https://github.com/user-attachments/assets/7273bd12-fd7b-480d-bd19-d62e4b3437fd)
 
-</details>
+
 
 </br>
 
-<details><summary>요구사항 정의서
-</summary>
+### ⚙ 요구사항 정의서
 
-![기능](https://github.com/user-attachments/assets/3cb96be3-d6e3-4e8a-b96e-76679eee5b06)
+![요구사항](https://github.com/user-attachments/assets/114c868d-8b8c-4cd6-a2f0-e8a3601330e9)
 
-</details>
 
 </br>
 
-<details><summary>FlowChart
-</summary>
+### ⚙ FlowChart
+
 
 ![다운로드](https://github.com/user-attachments/assets/9d83eba7-9f56-4ae6-af8c-383d0fb8729a)
 
-</details>
 
-</br>
 
-<details><summary>ERD
-</summary>
+
+
+### ⚙ ERD
+
 
 ![ERD](https://github.com/user-attachments/assets/17e08c19-54dd-4869-b526-2370f26bde56)
 
-</details>
 
 </br>
 
-<details><summary> Confluence 협업
-</summary>
+ ### ⚙ Confluence 협업
+
 
 
 ![confluence](https://github.com/user-attachments/assets/6ada4aa5-f78a-4d7f-a8c9-96375798c5ea)
@@ -177,8 +178,6 @@ https://drive.google.com/file/d/1KYAIyzTI8F43DpqoN_w5tnCVihCEqGb6/view
 - **개발 관련 & 공동 작업 가이드 작성**: 새로운 개발 도구나 언어, 공동 작업에 대해 팀원들이 쉽게 이해하고 편리하게 사용할 수 있도록 가이드를 작성하여 개발 효율성을 높였습니다.
 
 - **기타 프로젝트 산출물 및 링크 관리**: 프로젝트 산출물과 관련 서류, 개발 관련 링크들을 체계적으로 정리하여 편의성을 높였습니다.
-
-</details>
 
 
 
