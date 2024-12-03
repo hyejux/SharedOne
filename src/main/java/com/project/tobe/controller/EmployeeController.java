@@ -25,65 +25,58 @@ import java.util.Map;
 @RequestMapping("/employee")
 public class EmployeeController {
 
-//  @Autowired
-//  private EmployeeRepository employeeRepository;
-
   @Autowired
   @Qualifier("employeeService")
   private EmployeeService employeeService;
 
-//    @GetMapping("/employeeOne")
-//    public Employee employeeOne() {
-//        Employee e = new Employee("hyeju11"	,"asdf1234",	"임혜주",	"010-1111-1111"	,"asdf@gamil.com"	,"서울"	,"11111-1111111" , LocalDate.parse("2020-01-01", DateTimeFormatter.ISO_LOCAL_DATE),	(long)120000	,"master",	"S");
-//        return e;
-//        }
-
+  //직원 전체 조회
   @GetMapping("/employeeALL")
   public List<EmployeeDTO> employeeALL() {
     return employeeService.getAllList();
   }
 
-
-
-
+  //직원 검색 조회
   @PostMapping("/employeeSearch")
   public List<EmployeeDTO> employeePick(@RequestBody EmployeeDTO dto) {
     return employeeService.getPickList(dto);
   }
 
-
+  //직원 등록
   @PostMapping("/employeeRegist")
   public void employeeRegistTest(@RequestBody List<EmployeeTestDTO> dto) {
     employeeService.employeeRegistTest(dto);
   }
 
-
+  //직원 등록 시 아이디 중복 검사
   @PostMapping("/employeeIdCheck")
   public boolean employeeIdCheck(@RequestBody EmployeeDTO dto) {
     return employeeService.employeeIdCheck(dto);
   }
 
+  //직원 수정
   @PostMapping("/employeeUpdate")
   public void employeeUpdateMaster(@RequestBody EmployeeTestDTO dto) {
     employeeService.employeeUpdateMaster(dto);
   }
 
+  //직원 선택 삭제
   @PostMapping("/employeeDelete")
-  public void employeeDeleteTest(@RequestBody List<String> employeeIds) {
-    employeeService.employeeDeleteTest(employeeIds);
-  }
+  public void employeeDeleteTest(@RequestBody List<String> employeeIds) { employeeService.employeeDeleteTest(employeeIds); }
 
+  //직원 삭제
   @PostMapping("/employeeDeletePick")
   public void employeeDeletePick(@RequestBody String employeeId) {
     employeeService.employeeDeletePick(employeeId);
   }
 
-
+  //직원 비밀번호 변경
   @PostMapping("/employeePwChange")
   public void employeePwChange(@RequestBody EmployeeDTO dto) {
     employeeService.employeePwChange(dto);
   }
 
+
+  //현재 로그인 정보 가져오기
   @GetMapping("/user-info")
   public ResponseEntity<?> employeeUserInfo(Authentication authentication) {
     if (authentication == null) {
