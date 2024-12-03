@@ -31,7 +31,7 @@ public interface EmployeeService {
     //직원 비밀번호 변경
     void employeePwChange(EmployeeDTO dto);
 
-    //직원 선택 삭제
+    //직원 삭제
     void employeeDeletePick(String employeeId);
 
     //로그인한 직원 정보
@@ -43,12 +43,19 @@ public interface EmployeeService {
     // 본인보다 높은 권한의 직원 조회
     List<EmployeeDTO> getManagerList(String id);
 
+    // 직원 이메일 조회
+    String getEmail(String inputConfirmer);
+
+    // 마이페이지 정보 수정
+    void employeeUpdateMypage(EmployeeDTO dto);
+
+    // 마이페이지 비밀번호 변경
+    void employeeUpdateMypagePw(EmployeeDTO dto);
+
 
     Employee getUserById(String id);
 
     EmployeeDetails login(EmployeeDTO dto);
 
-    EmployeeDTO employeeUserSession(String id);
 
-    String getEmail(String inputConfirmer);
 }

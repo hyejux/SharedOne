@@ -121,17 +121,27 @@ public class EmployeeServiceImpl implements EmployeeService {
       return employeeMapper.getMySalesByMonth(employeeId);
   }
 
-
-  @Override
-  public EmployeeDTO employeeUserSession(String id) {
-    return employeeMapper.employeeUserSession(id);
-  }
-
-
+  // 직원 이메일 조회
   @Override
   public String getEmail(String employeeId) {
     return employeeMapper.getEmail(employeeId);
   }
+
+  // 마이페이지 정보 수정
+  @Override
+  public void employeeUpdateMypage(EmployeeDTO dto) {
+    employeeMapper.employeeUpdateMypage(dto);
+  }
+
+  // 마이페이지 비밀번호 변경
+  @Override
+  public void employeeUpdateMypagePw(EmployeeDTO dto) {
+    if (dto.getEmployeePw() != null) {
+      dto.setEmployeePw(bCryptPasswordEncoder.encode(dto.getEmployeePw()));
+    }
+    employeeMapper.employeeUpdateMypagePw(dto);
+  }
+
 
   @Override
   public Employee getUserById(String id) {
