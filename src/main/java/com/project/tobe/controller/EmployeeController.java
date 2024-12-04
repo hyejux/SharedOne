@@ -79,15 +79,24 @@ public class EmployeeController {
   //현재 로그인 정보 가져오기
   @GetMapping("/user-info")
   public ResponseEntity<?> employeeUserInfo(Authentication authentication) {
-    if (authentication == null) {
+
+    if (authentication == null) { // 인증 객체가 없다면
       return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Unauthorized");
     }
-    EmployeeDetails user = (EmployeeDetails)authentication.getPrincipal(); //인증객체 안에 principal값을 얻으면 유저객체가 나옵니다.
+
+    //인증객체 안에 principal값을 얻으면 유저객체가 나옴
+    EmployeeDetails user = (EmployeeDetails)authentication.getPrincipal();
+    System.out.println("로그인 정보 (이름):" + user.getNickname());
+    System.out.println("로그인 정보 (아이디):" + user.getUsername());
+    System.out.println("로그인 정보 (비밀번호) :" + user.getPassword());
+    System.out.println("로그인 정보 (권한) :" + user.getUserAuthorityGrade());
 
     // 사용자 이름과 권한을 반환
     Map<String, Object> response = new HashMap<>();
+    response.put("userName", user.getNickname());
     response.put("userId", user.getUsername());
-    response.put("grade", user.getUserAuthorityGrade());
+    response.put("userPw", user.getPassword());
+    response.put("userAuthorityGrade", user.getUserAuthorityGrade());
 
     return ResponseEntity.ok(response);
   }

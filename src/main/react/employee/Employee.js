@@ -10,7 +10,6 @@ import '../js/Pagination.css';
 import Pagination from '../js/Pagination';
 import '../js/pagecssReal.css';
 
-import { Bar } from 'react-chartjs-2';
 
 import {
     Chart as ChartJS,
@@ -502,16 +501,19 @@ const [originalItem, setOriginalItem] = useState({}); // 원래 데이터를 저
    const [sessionId, setSessionId] = useState('');
 
     useEffect(() => {
+
         const fetchUserId = async () => {
             try {
                 const response = await axios.get('/employee/user-info');
                 setSessionId(response.data.userId); // userId만 추출
+                console.log(response.data);
 
             } catch (error) {
                 console.error("Error fetching user ID:", error);
             }
         };
 
+        console.log("안녕");
         fetchUserId();
 
     }, []);
