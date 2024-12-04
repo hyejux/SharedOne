@@ -28,6 +28,121 @@ public class EmployeeServiceImpl implements EmployeeService {
   BCryptPasswordEncoder bCryptPasswordEncoder;
 
 
+  //직원 전체 조회
+  @Override
+  public List<EmployeeDTO> getAllList() {
+    return employeeMapper.getAllList();
+  }
+
+  //직원 검색 조회
+  @Override
+  public List<EmployeeDTO> getPickList(EmployeeDTO dto) {
+    return employeeMapper.getPickList(dto);
+  }
+
+
+  //직원 등록
+  @Override
+  public void employeeRegistTest( List<EmployeeTestDTO> dto) {
+
+    List<EmployeeTestDTO> list = new LinkedList<>();
+
+
+    for (EmployeeTestDTO employee : dto) {
+
+      //비밀번호 암호화 작업
+      employee.setEmployeePw(bCryptPasswordEncoder.encode(employee.getEmployeePw()));
+
+      // S 권한인 경우 직속 상사 없도록 null 값 삽입
+      if(employee.getAuthorityGrade().equals("S")) {
+        employee.setEmployeeManagerId(null);
+      }
+
+      list.add(employee);
+    }
+
+    employeeMapper.employeeRegistTest(list);
+  }
+
+
+  //직원 등록 시 아이디 중복 검사
+  @Override
+  public boolean employeeIdCheck(EmployeeDTO dto) {
+    int result = employeeMapper.employeeIdCheck(dto);
+    return result > 0 ;
+  }
+
+  //직원 비밀번호 변경
+  @Override
+  public void employeePwChange(EmployeeDTO dto) {
+    if (dto.getEmployeePw() != null) {
+      dto.setEmployeePw(bCryptPasswordEncoder.encode(dto.getEmployeePw()));
+    }
+    employeeMapper.employeePwChange(dto);
+  }
+
+  //로그인한 직원 정보
+  @Override
+  public AuthorityDto mypageAll(String employeeId) {
+    return employeeMapper.mypageAll(employeeId);
+  }
+
+  //직원 수정
+  @Override
+  public void employeeUpdateMaster(EmployeeTestDTO dto) {
+    // S 권한인 경우 직속 상사 없도록 null 값 삽입
+    if (dto.getAuthorityGrade().equals("S")) {
+      dto.setEmployeeManagerId(null);
+    }
+    employeeMapper.employeeUpdateMaster(dto);
+  }
+
+  //직원 선택 삭제
+  @Override
+  public void employeeDeleteTest(List<String> employeeIds) {
+    employeeMapper.employeeDeleteTest(employeeIds);
+  }
+
+  //직원 삭제
+  @Override
+  public void employeeDeletePick(String employeeId) {
+    employeeMapper.employeeDeletePick(employeeId);
+  }
+
+  // 본인보다 높은 권한의 직원 조회
+  @Override
+  public List<EmployeeDTO> getManagerList(String id) {
+        return employeeMapper.getManagerList(id);
+    }
+
+  // 로그인한 직원의 월별 실적 조회
+  @Override
+  public List<SalesByMonth> getMySalesByMonth(String employeeId) {
+      return employeeMapper.getMySalesByMonth(employeeId);
+  }
+
+  // 직원 이메일 조회
+  @Override
+  public String getEmail(String employeeId) {
+    return employeeMapper.getEmail(employeeId);
+  }
+
+  // 마이페이지 정보 수정
+  @Override
+  public void employeeUpdateMypage(EmployeeDTO dto) {
+    employeeMapper.employeeUpdateMypage(dto);
+  }
+
+  // 마이페이지 비밀번호 변경
+  @Override
+  public void employeeUpdateMypagePw(EmployeeDTO dto) {
+    if (dto.getEmployeePw() != null) {
+      dto.setEmployeePw(bCryptPasswordEncoder.encode(dto.getEmployeePw()));
+    }
+    employeeMapper.employeeUpdateMypagePw(dto);
+  }
+
+
   @Override
   public Employee getUserById(String id) {
     if (id == null) {
@@ -57,121 +172,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     return new EmployeeDetails(employee.orElse(null));
-  }
-
-  // 전부 조회
-  @Override
-  public List<EmployeeDTO> getAllList() {
-    return employeeMapper.getAllList();
-
-  }
-
-  // 검색 조회
-  @Override
-  public List<EmployeeDTO> getPickList(EmployeeDTO dto) {
-
-    return employeeMapper.getPickList(dto);
-  }
-
-
-  // 등록
-  @Override
-  public void employeeRegistTest( List<EmployeeTestDTO> dto) {
-
-    List<EmployeeTestDTO> list = new LinkedList<>();
-
-    for (EmployeeTestDTO employee : dto) {
-      employee.setEmployeePw(bCryptPasswordEncoder.encode(employee.getEmployeePw()));
-      if(employee.getAuthorityGrade().equals("S")){
-        employee.setEmployeeManagerId(null);
-      }
-      list.add(employee);
-    }
-
-    employeeMapper.employeeRegistTest(list);
-  }
-
-
-  // 아이디 중복 검사
-  @Override
-  public boolean employeeIdCheck(EmployeeDTO dto) {
-    int result = employeeMapper.employeeIdCheck(dto);
-    System.out.println(result);
-    return result > 0 ;
-  }
-
-  @Override
-  public void employeePwChange(EmployeeDTO dto) {
-    if (dto.getEmployeePw() != null) {
-      dto.setEmployeePw(bCryptPasswordEncoder.encode(dto.getEmployeePw()));
-    }
-    employeeMapper.employeePwChange(dto);
-  }
-
-  @Override
-  public AuthorityDto mypageAll(String employeeId) {
-    System.out.println(employeeMapper.mypageAll(employeeId).toString());
-    return employeeMapper.mypageAll(employeeId);
-  }
-
-
-
-
-  // 수정
-  @Override
-  public void employeeUpdateMaster(EmployeeTestDTO dto) {
-    System.out.println(dto.toString() + "야야야ㅑㅇ");
-    if (dto.getAuthorityGrade().equals("S")) {
-      dto.setEmployeeManagerId(null);
-    }
-
-    employeeMapper.employeeUpdateMaster(dto);
-  }
-
-//삭제
-  @Override
-  public void employeeDeleteTest(List<String> employeeIds) {
-
-    employeeMapper.employeeDeleteTest(employeeIds);
-  }
-  @Override
-  public void employeeDeletePick(String employeeId) {
-    employeeMapper.employeeDeletePick(employeeId);
-  }
-
-  @Override
-  public void employeeUpdateMypage(EmployeeDTO dto) {
-    employeeMapper.employeeUpdateMypage(dto);
-  }
-
-  @Override
-  public void employeeUpdateMypagePw(EmployeeDTO dto) {
-    System.out.println("pw " + dto.getEmployeePw());
-    if (dto.getEmployeePw() != null) {
-      dto.setEmployeePw(bCryptPasswordEncoder.encode(dto.getEmployeePw()));
-    }
-
-    employeeMapper.employeeUpdateMypagePw(dto);
-  }
-
-  @Override
-  public EmployeeDTO employeeUserSession(String id) {
-    return employeeMapper.employeeUserSession(id);
-  }
-
-  @Override
-    public List<EmployeeDTO> getManagerList(String id) {
-        return employeeMapper.getManagerList(id);
-    }
-
-    @Override
-    public List<SalesByMonth> getMySalesByMonth(String employeeId) {
-        return employeeMapper.getMySalesByMonth(employeeId);
-    }
-
-  @Override
-  public String getEmail(String employeeId) {
-    return employeeMapper.getEmail(employeeId);
   }
 
 

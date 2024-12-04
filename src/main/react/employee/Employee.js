@@ -10,7 +10,7 @@ import '../js/Pagination.css';
 import Pagination from '../js/Pagination';
 import '../js/pagecssReal.css';
 
-import { Bar } from 'react-chartjs-2';
+
 import {
     Chart as ChartJS,
     BarElement,
@@ -34,10 +34,6 @@ ChartJS.register(
     Legend
 );
 
-
-//  const truncate = (str, maxLength) => {
-//    return str.length > maxLength ? str.slice(0, maxLength) + '...' : str;
-//  };
 
 
 function Employee() {
@@ -70,15 +66,15 @@ function Employee() {
     };
 
     const {
-          allCheck: allCheckMain,
-          checkItem: checkItemMain,
-          showDelete: showDeleteMain,
-          handleMasterCheckboxChange: handleMasterCheckboxChangeMain,
-          handleCheckboxChange: handleCheckboxChangeMain,
-          handleDelete: handleDeleteMain,
-    setAllCheck: setAllCheckMain,
-      setCheckItem: setCheckItemMain,
-      setShowDelete: setShowDeleteMain
+        allCheck: allCheckMain,
+        checkItem: checkItemMain,
+        showDelete: showDeleteMain,
+        handleMasterCheckboxChange: handleMasterCheckboxChangeMain,
+        handleCheckboxChange: handleCheckboxChangeMain,
+        handleDelete: handleDeleteMain,
+        setAllCheck: setAllCheckMain,
+        setCheckItem: setCheckItemMain,
+        setShowDelete: setShowDeleteMain
 
       } = useCheckboxManager();
 
@@ -99,11 +95,13 @@ function Employee() {
         authorityName: ''
     }]);
 
+
 const fetchEmployeeList = () => {
     axios.get('/employee/employeeALL')  // Spring Boot 엔드포인트와 동일한 URL로 요청
         .then(response => setEmployee(response.data))  // 응답 데이터를 상태로 설정
         .catch(error => console.error('Error fetching Employee data:', error));
 };
+
 
 // useEffect to fetch employee list when the component mounts
 useEffect(() => {
@@ -503,16 +501,19 @@ const [originalItem, setOriginalItem] = useState({}); // 원래 데이터를 저
    const [sessionId, setSessionId] = useState('');
 
     useEffect(() => {
+
         const fetchUserId = async () => {
             try {
                 const response = await axios.get('/employee/user-info');
                 setSessionId(response.data.userId); // userId만 추출
+                console.log(response.data);
 
             } catch (error) {
                 console.error("Error fetching user ID:", error);
             }
         };
 
+        console.log("안녕");
         fetchUserId();
 
     }, []);
@@ -619,21 +620,6 @@ const [goOut, setGoOut] = useState();
   const handlePwCloseClick = () => {
         setIsVisibleDeleteInput(false);
     }
-
-// 비밀번호 변경 로직
-
-/*   const [emplPw, setEmplPw] = useState({''});*/
-
-/*
-  const handleemplPwChange = (e) => {
-    const { name, value } = e.target;
-
-    setEmplPw({
-      ...emplPw,
-      [name]: value,
-    });
-  };
-*/
 
 
 // [수정] 비밀번호 변경 기능
@@ -1299,6 +1285,7 @@ const handleDeletePickClick = () => {
 
             )}
             {/* 모달창의 끝  */}
+
             {/* 수정 모달창 */}
             {isModifyModalVisible && (
                 <div className="confirmRegist">
@@ -1389,14 +1376,7 @@ const handleDeletePickClick = () => {
                     </div>
                 </div>
             )}
-
             {/* 수정 모달창 끝  */}
-
-            {/* 새로운 모달창 */}
-            {isVisibleDetail && (
-                <div> 추가 모달창  </div>
-            )}
-
 
         </div>
 
