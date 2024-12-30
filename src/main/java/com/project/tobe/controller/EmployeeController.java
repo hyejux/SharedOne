@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
@@ -31,8 +32,11 @@ public class EmployeeController {
 
   //직원 전체 조회
   @GetMapping("/employeeALL")
-  public List<EmployeeDTO> employeeALL() {
-    return employeeService.getAllList();
+//  public List<EmployeeDTO> employeeALL() {
+//    return employeeService.getAllList();
+//  }
+    public List<Employee> employeeALL() {
+      return employeeService.getAllList();
   }
 
   //직원 검색 조회
@@ -41,10 +45,9 @@ public class EmployeeController {
     return employeeService.getPickList(dto);
   }
 
-  //직원 등록
   @PostMapping("/employeeRegist")
-  public void employeeRegistTest(@RequestBody List<EmployeeTestDTO> dto) {
-    employeeService.employeeRegistTest(dto);
+  public void employeeRegist(@RequestBody List<EmployeeTestDTO> dto) {
+    employeeService.employeeRegist(dto);
   }
 
   //직원 등록 시 아이디 중복 검사

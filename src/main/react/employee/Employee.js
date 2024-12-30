@@ -79,8 +79,10 @@ function Employee() {
       } = useCheckboxManager();
 
 
+
+
     // 메인 리스트
-    let [employee, setEmployee] = useState([{
+    const [employee, setEmployee] = useState([{
         employeeId: '',
         employeePw: '',
         employeeName: '',
@@ -91,15 +93,18 @@ function Employee() {
         hireDate: null,
         salary: 0,
       /*  employeeManagerId: '',*/
-        authorityGrade: '',
-        authorityName: ''
+        authority : { authorityGrade: '',
+            authorityName: ''
+        }
     }]);
 
 
 const fetchEmployeeList = () => {
     axios.get('/employee/employeeALL')  // Spring Boot 엔드포인트와 동일한 URL로 요청
         .then(response => setEmployee(response.data))  // 응답 데이터를 상태로 설정
+    console.log(response.data);
         .catch(error => console.error('Error fetching Employee data:', error));
+
 };
 
 
@@ -327,7 +332,7 @@ const onClickListAdd = () => {
         /*employeeManagerId: test.employeeManagerId.replace(/\s+/g, ''),*/
         authorityGrade: test.authorityGrade
       };
-  
+
       // 급여 입력값을 숫자로 변환 (콤마 제거)
       const salaryNumber = Number(trimmedTest.salary.replace(/,/g, '')); // trimmedTest에서 급여를 숫자로 변환
       const newEntry = { ...trimmedTest, salary: salaryNumber }; // 숫자로 변환된 급여 값을 포함한 새로운 객체 생성
