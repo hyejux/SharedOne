@@ -11,13 +11,14 @@ import java.util.List;
 public interface EmployeeService {
 
     //직원 전체 조회
-    List<EmployeeDTO> getAllList();
+//    List<EmployeeDTO> getAllList();
+    List<Employee> getAllList();
 
     //직원 검색 조회
     List<EmployeeDTO> getPickList(EmployeeDTO dto);
 
     //직원 등록
-    void employeeRegistTest(List<EmployeeTestDTO> dto);
+    void employeeRegist(List<EmployeeTestDTO> dto);
 
     //직원 등록 시 아이디 체크
     boolean employeeIdCheck(EmployeeDTO dto);

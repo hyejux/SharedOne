@@ -28,12 +28,12 @@ public class EmployeeDetails implements UserDetails {
 
     try {
       // Employee의 authorityGrade를 UserRole Enum으로 변환
-      UserRole role = UserRole.valueOf(employee.getAuthorityGrade());
+      UserRole role = UserRole.valueOf(employee.getAuthority().getAuthorityGrade());
       // 권한에 ROLE_ 접두사 붙여 추가
       authorities.add(new SimpleGrantedAuthority("ROLE_" + role.name()));
     } catch (IllegalArgumentException e) {
       // authorityGrade가 UserRole Enum에 정의되지 않은 경우 에러 출력
-      System.err.println("Invalid authorityGrade value: " + employee.getAuthorityGrade());
+      System.err.println("Invalid authorityGrade value: " + employee.getAuthority().getAuthorityGrade());
     }
 
     return authorities;
@@ -60,7 +60,7 @@ public class EmployeeDetails implements UserDetails {
 
   // 사용자의 권한 등급 반환
   public String getUserAuthorityGrade() {
-    return employee.getAuthorityGrade();
+    return employee.getAuthority().getAuthorityGrade();
   }
 
   // 계정이 만료되었는지 확인 (true: 만료되지 않음)
