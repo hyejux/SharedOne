@@ -4,6 +4,7 @@ package com.project.tobe.serviceimpl;
 import com.project.tobe.dto.*;
 import com.project.tobe.entity.Employee;
 import com.project.tobe.mapper.EmployeeMapper;
+import com.project.tobe.repository.EmployeeCustomRepository;
 import com.project.tobe.repository.EmployeeRepository;
 import com.project.tobe.security.EmployeeDetails;
 import com.project.tobe.service.EmployeeService;
@@ -22,7 +23,10 @@ public class EmployeeServiceImpl implements EmployeeService {
   EmployeeMapper employeeMapper;
 
   @Autowired
-  EmployeeRepository repository;
+  EmployeeRepository employeeRepository;
+
+  @Autowired
+  EmployeeCustomRepository employeeCustomRepository;
 
   @Autowired
   BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -30,8 +34,24 @@ public class EmployeeServiceImpl implements EmployeeService {
 
   //직원 전체 조회
   @Override
-  public List<EmployeeDTO> getAllList() {
-    return employeeMapper.getAllList();
+//  public List<EmployeeDTO> getAllList() {
+//    return employeeMapper.getAllList();
+//  }
+//  public List<Employee> getAllList() {
+//    return employeeRepository.findAll();
+//  }
+//  public List<Employee> getAllList() {
+//    return employeeRepository.findByEmplYn("Y");
+//  }
+//  public List<Employee> getAllList() {
+//    return employeeRepository.findEmployeesByAuthorityOrder2();
+//  }
+  public List<Employee> getAllList() {
+    List<Employee> em = employeeCustomRepository.findEmployeesByAuthorityOrdered();
+    for(Employee e : em){
+      System.out.println(e.getEmployeeName() +"|" + e.getAuthority().getAuthorityName() + " " + e.getAuthority().getAuthorityGrade());
+    }
+    return employeeCustomRepository.findEmployeesByAuthorityOrdered();
   }
 
   //직원 검색 조회
@@ -43,24 +63,30 @@ public class EmployeeServiceImpl implements EmployeeService {
 
   //직원 등록
   @Override
-  public void employeeRegistTest( List<EmployeeTestDTO> dto) {
-
+  public void employeeRegist(List<EmployeeTestDTO> dto) {
+//    System.out.println(employee);
     List<EmployeeTestDTO> list = new LinkedList<>();
-
-
     for (EmployeeTestDTO employee : dto) {
-
       //비밀번호 암호화 작업
       employee.setEmployeePw(bCryptPasswordEncoder.encode(employee.getEmployeePw()));
-
       // S 권한인 경우 직속 상사 없도록 null 값 삽입
       if(employee.getAuthorityGrade().equals("S")) {
         employee.setEmployeeManagerId(null);
       }
-
       list.add(employee);
     }
 
+//    List<Employee> list2 = new LinkedList<>();
+//    for (Employee e : employee) {
+//      e.setEmployeePw(bCryptPasswordEncoder.encode(e.getEmployeePw()));
+////       S 권한인 경우 직속 상사 없도록 null 값 삽입
+//      if (e.getAuthority().getAuthorityGrade().equals("S")) {
+//        e.setEmployeeManagerId(null);
+//      }
+//      e.setEmplYn("Y");
+//      list2.add(e);
+//    }
+//    employeeRepository.saveAll(list2);
     employeeMapper.employeeRegistTest(list);
   }
 
@@ -149,7 +175,7 @@ public class EmployeeServiceImpl implements EmployeeService {
       return null;
     }
 
-    Optional<Employee> employee = repository.findById(id);
+    Optional<Employee> employee = employeeRepository.findById(id);
 
     return employee.orElse(null);
   }
@@ -161,7 +187,7 @@ public class EmployeeServiceImpl implements EmployeeService {
       return null;
     }
 
-    Optional<Employee> employee = repository.findById(dto.getEmployeeId());
+    Optional<Employee> employee = employeeRepository.findById(dto.getEmployeeId());
 
     if (employee.isEmpty()) {
       return null;
