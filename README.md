@@ -62,6 +62,20 @@
 
 ##  Tech Stack
 
+
+| 항목 | 내용 |
+|---|---|
+| **프레임워크** |  JAVA 11 / Spring Boot 2.7.18 / Spring Security |
+| **프론트엔드** | React 18.3.1 |
+| **데이터베이스(DB)** | PostgreSql 12 |
+| **ORM** | MyBatis 2.2.2 / Spring Data JPA 2.2 |
+| **클라우드** | Cloudinary / Amazon AWS RDS|
+| **개발 도구(IDE)** | IntelliJ IDEA, VSCode, Figma |
+| **협업** | Git , GitHub, Jira, Confluence |
+<br/>
+
+
+
 - **Front-End:** 
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
 <br>   
